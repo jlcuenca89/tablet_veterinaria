@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linea Agrícola - Farmagro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+    </script>
+</head>
+<body>
+  <div class="background-container" onclick="openMainModal()">
+      <img src="imgs/background.jpg" alt="Background Image" class="background-image">
+  </div>
+
+  <div class="modal" id="mainModal">
+    <div class="modal-content">
+      <header class="modal-header">
+        <img src="imgs/header-image.svg" alt="Header Image" class="header-image">
+        <button class="close-button" onclick="closeModal('mainModal')">
+          <span class="material-icons">close</span>
+        </button>
+      </header>
+      
+      <div class="icon-container">
+        <div class="icon-item" onclick="openPdfViewer(0)">
+          <img src="imgs/pdf-icon.svg" alt="PDF Icon">
+            <h3>PDF Gallery 1</h3>
+        </div>
+        <div class="icon-item" onclick="openPdfViewer(1)">
+          <img src="imgs/pdf-icon.svg" alt="PDF Icon">
+            <h3>PDF Gallery 2</h3>
+        </div>
+        <div class="icon-item" onclick="openPdfViewer(2)">
+          <img src="imgs/pdf-icon.svg" alt="PDF Icon">
+            <h3>PDF Gallery 3</h3>
+        </div>
+        <div class="icon-item" onclick="openPdfViewer(3)">
+          <img src="imgs/pdf-icon.svg" alt="PDF Icon">
+            <h3>PDF Gallery 4</h3>
+        </div>
+        <div class="icon-item" onclick="openPdfViewer(4)">
+          <img src="imgs/pdf-icon.svg" alt="PDF Icon">
+            <h3>PDF Gallery 5</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pdf-modal" id="pdfModal">
+    <div class="pdf-content">
+        <button class="close-button" onclick="closePdfViewer()">
+            <span class="material-icons">close</span>
+        </button>
+        <div class="pdf-container">
+            <canvas id="pdf-canvas"></canvas>
+        </div>
+        <div class="pdf-controls">
+            <button class="page-nav-button" onclick="prevPage()">
+                <span class="material-icons">keyboard_arrow_left</span>
+            </button>
+            <span id="page-counter">Page 1 of 1</span>
+            <button class="page-nav-button" onclick="nextPage()">
+                <span class="material-icons">keyboard_arrow_right</span>
+            </button>
+        </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

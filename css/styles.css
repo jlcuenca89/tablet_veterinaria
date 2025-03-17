@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-container {
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+}
+
+.modal, .carousel-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  position: relative;
+  width: 95%;
+  height: 95%;
+  margin: 2.5% auto;
+  background: white;
+}
+
+.modal-header {
+  position: relative;
+  width: 100%;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+}
+
+
+.modal-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-image {
+  width: 100%;
+  height: auto;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.close-button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.close-button .material-icons {
+  font-size: 40px;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-image: url('../imgs/fondo_tecnologia.png'); /* Cambia el nombre del archivo según corresponda */
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  width: 50%;
+  text-align: center;
+}
+
+.icon-item:hover {
+  background-color: #f0f0f0;
+}
+
+.icon-item .material-icons {
+  font-size: 100px;
+  margin-bottom: 10px;
+  color: #3498db;
+}
+
+.carousel-modal {
+  display: none;
+}
+
+.carousel-modal .carousel-content {
+  position: relative;
+  width: 95%;
+  height: 95%;
+  margin: 2.5% auto;
+  background: black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('../imgs/background-icon-container.jpg'); /* Cambia el nombre del archivo según corresponda */
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.right-centered-image {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8%; /* Ajusta el tamaño según sea necesario */
+  height: auto;
+}
+
+.carousel-container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.nav-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.pdf-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.pdf-content {
+  position: relative;
+  width: 95%;
+  height: 95%;
+  margin: 2.5% auto;
+  background: #333;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pdf-container {
+  flex: 1;
+  width: 99%;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#pdf-canvas {
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  width: 100%;
+
+}
+
+.pdf-controls {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 0 0 10px 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-nav-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.page-nav-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#page-counter {
+  color: white;
+  font-size: 20px;
+}
